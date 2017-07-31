@@ -1,0 +1,1 @@
+ModLoader.SetupFileHook( "lua/Gorge.lua", "lua/SpiderGorge/Gorge.lua", "post")
