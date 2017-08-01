@@ -1,7 +1,7 @@
 
 Script.Load("lua/WallMovementMixin.lua")
 
-Gorge.kMaxWallSpeed = Gorge.kMaxGroundSpeed *0.5
+Gorge.kMaxWallSpeed = Gorge.kMaxGroundSpeed *0.7
 
 
 local networkVars =
@@ -192,7 +192,7 @@ function Gorge:OnWorldCollision(normal, impactForce, newVelocity)
 
     PROFILE("Gorge:OnWorldCollision")
 
-    self.wallWalking = self:GetIsWallWalkingPossible() and normal.y < 0.5
+    self.wallWalking = self:GetIsWallWalkingPossible() and normal.y < 0.5 and (not self:GetIsOnGround() or self.wallWalking)
 
 end
 
