@@ -234,3 +234,5 @@ function Gorge:GetMaxSpeed(possible)
     end
     return self.kMaxGroundSpeed
 end
+
+Shared.LinkClassToMap("Gorge", Gorge.kMapName, networkVars, true)
